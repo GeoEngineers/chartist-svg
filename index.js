@@ -54,11 +54,27 @@ function defaults(o={}) {
 
 function chart(typ, dat, o={}) {
   var o = defaults(o);
+  // console.log("Options:", o)
   var w = o.chart.width, h = o.chart.height;
   var th = o.title.height, sth = o.subtitle.height;
   var div = document.createElement('div');
   document.querySelector('svg').appendChild(div);
-  var cht = new (FUNCTION.get(typ))(div, dat, o.chart);
+
+  // console.log("FUNCTION.get(typ)", FUNCTION.get(typ));
+  // console.log("DATA", dat);
+  // console.log("o.chart", o.chart);
+  
+  let chartOptions = o.chart;
+  if(o.axisX){
+    chartOptions.axisX = Object.assign(o.axisX)
+  }
+  if(o.axisY){
+    chartOptions.axisY = Object.assign(o.axisY)
+  }
+  console.log("chartOptions", chartOptions);
+
+  var cht = new (FUNCTION.get(typ))(div, dat, chartOptions);
+  
   return new Promise((fres) => {
     cht.on('created', (data) => {
       var svg = div.querySelector('svg');
