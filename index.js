@@ -71,7 +71,7 @@ function chart(typ, dat, o={}) {
   if(o.axisY){
     chartOptions.axisY = Object.assign(o.axisY)
   }
-  console.log("chartOptions", chartOptions);
+  // console.log("chartOptions", chartOptions);
 
   var cht = new (FUNCTION.get(typ))(div, dat, chartOptions);
   
