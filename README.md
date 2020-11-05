@@ -1,7 +1,5 @@
 # chartist-svg
 
-[![NPM](https://nodei.co/npm/chartist-svg.png)](https://nodei.co/npm/chartist-svg/)
-
 Generate SVG chart using [chartist] on node.js
 > You can paste the SVG code to a file directly.
 
