@@ -33,6 +33,12 @@ const chartist = require('chartist-svg');
 //     'font-size': '12px', 'font-family': 'Verdana', 'font-weight': 'bold',
 //     fill: 'indianred', 'text-anchor': 'middle', (... other svg attrbiutes)
 //   }
+//   axisX: {
+//     postion: 'start'
+//   },
+//   axisY: {
+//     postion: 'end'
+//   }
 // }
 
 
